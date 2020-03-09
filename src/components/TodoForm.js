@@ -18,9 +18,10 @@ class TodoForm extends React.Component {
                 name='item'
                 />
                 <button>Add</button>
-                <button>Delete</button>
             </form>
           </div>
         );
       }
     }
+
+    export default TodoForm;

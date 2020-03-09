@@ -1,10 +1,11 @@
 import React from 'react';
-import Todo from './components/Todo';
+import Todo from './Todo';
 
 const TodoList = props => {
     return (
         <div>
             <Todo />
+            <button>Delete</button>
         </div>
     );
 };
