@@ -40,19 +40,17 @@ class App extends React.Component {
     });
   };
 
-  deleteItem = clickedItemId => {
+  deleteItem = () => {
     console.log('hello');
-    this.setState({
-      todo: this.state.todo.map((item, index) => {
-        if(item.id === clickedItemId) {
-          const dlItem = (index, e) => {
-            dlItem.splice(index, 1);
-            this.setState(...item);
-          }
-        }
-      })
-    });
-  };
+    this.state.todo.map(item => {
+      if(item.completed === true) {
+      this.state.todo.splice(item, 1);
+      console.log(this.state.todo);
+      this.setState({...item});
+      }
+    })
+  }
+   
 
   addItem = itemName => {
     const newItem = {
