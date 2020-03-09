@@ -1,17 +1,19 @@
 import React from 'react';
 import Todo from './Todo';
+import App from '../App';
 
 const TodoList = props => {
     return (
         <div>
-            {props.todo.map(item => (
+            {props.todo.map((item, index) => (
             <Todo 
-            key={item.id}
-            item={item}
-            toggleItem={props.toggleItem}
+                key={index}
+                item={item}
+                toggleItem={props.toggleItem}
+
             />
             ))}
-            <button>Delete</button>
+            <button onClick={props.deleteItem}>Delete</button>
         </div>
     );
 };

@@ -25,6 +25,7 @@ class App extends React.Component {
   }
 
   toggleItem = clickedItemId => {
+    console.log(clickedItemId);
     this.setState({
       todo: this.state.todo.map(item => {
         if(item.id === clickedItemId) {
@@ -34,6 +35,20 @@ class App extends React.Component {
           };
         } else {
           return  item;
+        }
+      })
+    });
+  };
+
+  deleteItem = clickedItemId => {
+    console.log('hello');
+    this.setState({
+      todo: this.state.todo.map((item, index) => {
+        if(item.id === clickedItemId) {
+          const dlItem = (index, e) => {
+            dlItem.splice(index, 1);
+            this.setState(...item);
+          }
         }
       })
     });
@@ -58,6 +73,7 @@ class App extends React.Component {
         <TodoList 
         todo={this.state.todo}
         toggleItem={this.toggleItem}
+        deleteItem={this.deleteItem}
         />
       </div>
     );
