@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   toggleItem = clickedItemId => {
-    this.state({
+    this.setState({
       todo: this.state.todo.map(item => {
         if(item.id === clickedItemId) {
           return {
@@ -45,7 +45,7 @@ class App extends React.Component {
       id: new Date(),
       completed: false
     };
-    this.state({
+    this.setState({
       todo: [...this.state.todo, newItem]
     });
   };
