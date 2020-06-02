@@ -4,33 +4,28 @@ import TodoForm from './components/TodoForm';
 
 const todo = [
   {
-    task: "Bananas",
+    task: "put on some clothes",
     id: 123,
     completed: false
   },
   {
-    task: "Torillas",
+    task: "go to a party",
     id: 124,
     completed: false
   },
   {
-    task: "Milk",
+    task: "drink beer",
     id: 1235,
     completed: false
   },
   {
-    task: "Pizza Sauce",
+    task: "crash your car",
+    id: 1235,
+    completed: false
+  },
+  {
+    task: "go to jail",
     id: 1246,
-    completed: false
-  },
-  {
-    task: "Raw Honey",
-    id: 1237,
-    completed: false
-  },
-  {
-    task: "Granola",
-    id: 1248,
     completed: false
   }
 ];
