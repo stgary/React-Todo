@@ -3,6 +3,7 @@ import Todo from './Todo';
 import App from '../App';
 
 const TodoList = props => {
+    console.log(props)
     return (
         <div>
             {props.todo.map((item, index) => (

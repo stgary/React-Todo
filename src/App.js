@@ -4,16 +4,37 @@ import TodoForm from './components/TodoForm';
 
 const todo = [
   {
-    task: 'Organize Garage',
-    id: 1528817077286,
+    task: "Bananas",
+    id: 123,
     completed: false
   },
   {
-    task: 'Bake Cookies',
-    id: 1528817084358,
+    task: "Torillas",
+    id: 124,
+    completed: false
+  },
+  {
+    task: "Milk",
+    id: 1235,
+    completed: false
+  },
+  {
+    task: "Pizza Sauce",
+    id: 1246,
+    completed: false
+  },
+  {
+    task: "Raw Honey",
+    id: 1237,
+    completed: false
+  },
+  {
+    task: "Granola",
+    id: 1248,
     completed: false
   }
 ];
+
 
 class App extends React.Component {
 
@@ -40,16 +61,14 @@ class App extends React.Component {
     });
   };
 
+
   deleteItem = () => {
-    console.log('hello');
-    this.state.todo.map(item => {
-      if(item.completed === true) {
-      this.state.todo.splice(item, 1);
-      console.log(this.state.todo);
-      this.setState({...item});
-      }
-    })
-  }
+    const updatedList = this.state.todo.filter(item => item.completed !== true);
+    console.log(updatedList)
+    this.setState({
+      todo: [...updatedList]
+    });
+  };
    
 
   addItem = itemName => {
